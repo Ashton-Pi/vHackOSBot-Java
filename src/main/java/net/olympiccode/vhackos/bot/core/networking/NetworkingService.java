@@ -49,7 +49,7 @@ public class NetworkingService implements BotService {
 
     public void runService() {
         try {
-            if (!(vHackOSBot.api.getStats().getMoney() == 999999999L)) {
+            if (!(vHackOSBot.api.getStats().getMoney() == 999000000L)) {
                 ((ArrayList<BruteForce>) ((ArrayList) vHackOSBot.api.getTaskManager().getActiveBrutes()).clone()).forEach(bruteForce -> {
                     if (cache.asMap().containsKey(bruteForce.getIp())) return;
                     if (bruteForce.getState() == BruteForceState.SUCCESS) {
