@@ -48,7 +48,7 @@ public class ServerService implements BotService {
                 LOG.info("Opened " + server.getPackages() + " server packages, got " + result.getServer() + " server, " + result.getAv() + " av, " + result.getFw() + " fw and " + result.getBoost() + " boosters.");
             }
             server.update();
-            while (server.getServerPieces() > 9 && (server.getServerStrength() < server.getServerStrengthMax())) {
+            while (server.getServerPieces() > 9999999999999999999999999999999999999999999999 && (server.getServerStrength() < server.getServerStrengthMax())) {
                 LOG.info("Upgrading server's server...");
                 if (server.upgrade(Server.NODE_TYPE.SERVER, 1)) LOG.info("Upgraded server's server.");
                 else LOG.info("Failed to upgrade server's server...");
@@ -57,7 +57,7 @@ public class ServerService implements BotService {
             int fwNodes = (int) Arrays.stream(server.getFirewallStrength()).filter(value -> value != 0).count();
             for (int i = 0; i < fwNodes; i++) {
                 LOG.info("Upgrading server's firewall node " + (i + 1) + "...");
-                while (server.getFirewallPieces() > 9 && (server.getFirewallStrength()[i] < server.getFirewallStrengthMax()[i])) {
+                while (server.getFirewallPieces() > 9999999999999999999999999999999999999999999999 && (server.getFirewallStrength()[i] < server.getFirewallStrengthMax()[i])) {
                     if (server.upgrade(Server.NODE_TYPE.FW, i + 1))
                         LOG.info("Upgraded server's firewall node " + (i + 1) + ".");
                     else LOG.info("Failed to upgrade server's firewall node " + (i + 1) + ".");
@@ -68,7 +68,7 @@ public class ServerService implements BotService {
             int avNodes = (int) Arrays.stream(server.getAntivirusStrength()).filter(value -> value != 0).count();
             for (int i = 0; i < avNodes; i++) {
                 LOG.info("Upgrading server's antivirus node " + (i + 1) + "...");
-                while (server.getAntivirusPieces() > 9 && (server.getAntivirusStrength()[i] < server.getAntivirusStrengthMax()[i])) {
+                while (server.getAntivirusPieces() > 9999999999999999999999999999999999999999999999 && (server.getAntivirusStrength()[i] < server.getAntivirusStrengthMax()[i])) {
                     if (server.upgrade(Server.NODE_TYPE.AV, i + 1))
                         LOG.info("Upgraded server's antivirus node " + (i + 1) + ".");
                     else LOG.info("Failed to upgrade server's antivirus node " + (i + 1) + ".");
