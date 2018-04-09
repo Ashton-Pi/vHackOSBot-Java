@@ -7,6 +7,9 @@ public class UpdateConfigValues {
     @ConfigOption(path = "update.enabled", defaultValue = "true", options = {"true", "false"})
     public static boolean enabled;
 
+    @ConfigOption(path = "openserver.enabled", defaultValue = "false", options = {"true", "false"})
+    public static boolean openServerOnly;
+    
     @ConfigOption(path = "update.installAllAvaliableApps", defaultValue = "true", options={"true", "false"})
     public static boolean installAllAvalibaleApps;
 
